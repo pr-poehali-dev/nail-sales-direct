@@ -174,6 +174,33 @@ const Index = () => {
               Широкий ассортимент метизов для любых строительных задач
             </p>
           </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="lg:col-span-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/IMG_20240724_163958.jpg"
+                  alt="Гвозди барабанные винтовые"
+                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/IMG_20240724_164628.jpg"
+                  alt="Гвозди ерш кольцевые"
+                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/2.5х55винт,2.5х60кольцо,3.1х90кольцо.jpg"
+                  alt="Склад готовой продукции"
+                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/2.5х45винт,2.5х70винт,2.5х50винт.jpg"
+                  alt="Ассортимент гвоздей на складе"
+                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                />
+              </div>
+            </div>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((category, idx) => (
