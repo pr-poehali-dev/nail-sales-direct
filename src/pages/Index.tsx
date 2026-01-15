@@ -194,10 +194,21 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="flex flex-wrap justify-center gap-4 mt-12">
             <Button size="lg" onClick={() => scrollToSection("price")}>
               <Icon name="FileText" size={20} className="mr-2" />
               Полный прайс-лист
+            </Button>
+            <Button size="lg" variant="outline" onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/price.xlsx';
+              link.download = 'Прайс-лист_ГЛОБУС-МЕТИЗ.xlsx';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}>
+              <Icon name="Download" size={20} className="mr-2" />
+              Скачать Excel
             </Button>
           </div>
         </div>
