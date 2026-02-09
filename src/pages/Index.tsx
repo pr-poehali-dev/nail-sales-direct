@@ -17,49 +17,30 @@ const Index = () => {
 
   const products = [
     {
-      category: "Гвозди винтовые",
+      category: "Гвозди винтовые / ерш / кольцевые",
       items: [
-        { name: "2.5/45 винтовой" },
-        { name: "2.5/50 винтовой" },
-        { name: "2.5/55 винтовой" },
-        { name: "2.5/60 винтовой" },
-        { name: "2.5/70 винтовой" },
-        { name: "2.5/80 винтовой" },
-        { name: "2.8/60 винтовой" },
-        { name: "2.8/70 винтовой" },
-        { name: "2.8/80 винтовой" },
-        { name: "2.8/88 винтовой" },
-        { name: "2.8/90 винтовой" },
-        { name: "3.1/70 винтовой" },
-        { name: "3.1/80 винтовой" },
-        { name: "3.1/90 винтовой" },
-      ]
-    },
-    {
-      category: "Гвозди ерш/кольцевые",
-      items: [
-        { name: "2.5/45 ерш" },
-        { name: "2.5/50 ерш" },
-        { name: "2.5/55 ерш" },
-        { name: "2.5/60 ерш" },
-        { name: "2.5/70 ерш" },
-        { name: "2.5/80 ерш" },
-        { name: "2.8/60 ерш" },
-        { name: "2.8/70 ерш" },
-        { name: "2.8/80 ерш" },
-        { name: "2.8/88 ерш" },
-        { name: "2.8/90 ерш" },
-        { name: "3.1/70 ерш" },
-        { name: "3.1/80 ерш" },
-        { name: "3.1/90 ерш" },
+        { name: "2.5/45", quantity: "7200 шт", price: "2590 ₽" },
+        { name: "2.5/50", quantity: "7200 шт", price: "2775 ₽" },
+        { name: "2.5/55", quantity: "7200 шт", price: "2960 ₽" },
+        { name: "2.5/60", quantity: "7200 шт", price: "3145 ₽" },
+        { name: "2.5/70", quantity: "7200 шт", price: "3515 ₽" },
+        { name: "2.5/80", quantity: "7200 шт", price: "3885 ₽" },
+        { name: "2.8/60", quantity: "5400 шт", price: "2925 ₽" },
+        { name: "2.8/70", quantity: "5400 шт", price: "3315 ₽" },
+        { name: "2.8/80", quantity: "5400 шт", price: "3705 ₽" },
+        { name: "2.8/88", quantity: "5400 шт", price: "3900 ₽" },
+        { name: "2.8/90", quantity: "5400 шт", price: "4095 ₽" },
+        { name: "3.1/70", quantity: "3600 шт", price: "2835 ₽" },
+        { name: "3.1/80", quantity: "3600 шт", price: "3150 ₽" },
+        { name: "3.1/90", quantity: "3600 шт", price: "3465 ₽" },
       ]
     },
     {
       category: "Гвозди гладкие общестроительные",
       items: [
-        { name: "2.5/40" },
-        { name: "2.5/70" },
-        { name: "2.8/80" },
+        { name: "2.5/40", quantity: "7200 шт", price: "2310 ₽" },
+        { name: "2.5/70", quantity: "7200 шт", price: "3465 ₽" },
+        { name: "2.8/80", quantity: "5400 шт", price: "3500 ₽" },
       ]
     }
   ];
@@ -339,7 +320,7 @@ const Index = () => {
               <CardHeader className="bg-gradient-to-r from-primary to-accent text-white">
                 <CardTitle className="text-2xl">Базовый прайс-лист 2026</CardTitle>
                 <CardDescription className="text-white/90">
-                  Цены указаны за 1 кг при заказе от 100 кг
+                  Цены указаны за коробку (барабан)
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
@@ -350,16 +331,25 @@ const Index = () => {
                         <Icon name="Folder" size={20} />
                         {category.category}
                       </h3>
-                      <div className="space-y-2 ml-7">
-                        {category.items.map((item, itemIdx) => (
-                          <div key={itemIdx} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-0">
-                            <div>
-                              <p className="font-medium text-gray-900">{item.name}</p>
-                              <p className="text-sm text-gray-600">{item.specs}</p>
-                            </div>
-                            <p className="font-bold text-accent text-lg">{item.price}</p>
-                          </div>
-                        ))}
+                      <div className="overflow-x-auto">
+                        <table className="w-full">
+                          <thead>
+                            <tr className="border-b-2 border-primary/20">
+                              <th className="text-left py-2 px-2 font-semibold text-gray-700">Размер</th>
+                              <th className="text-center py-2 px-2 font-semibold text-gray-700">Гвоздей в коробке</th>
+                              <th className="text-right py-2 px-2 font-semibold text-gray-700">Цена за коробку</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {category.items.map((item, itemIdx) => (
+                              <tr key={itemIdx} className="border-b border-gray-200 last:border-0 hover:bg-gray-50">
+                                <td className="py-3 px-2 font-medium text-gray-900">{item.name}</td>
+                                <td className="py-3 px-2 text-center text-gray-700">{item.quantity}</td>
+                                <td className="py-3 px-2 text-right font-bold text-accent text-lg">{item.price}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   ))}
@@ -371,10 +361,10 @@ const Index = () => {
                     <div className="space-y-2">
                       <p className="font-semibold text-gray-900">Особые условия:</p>
                       <ul className="space-y-1 text-gray-700">
-                        <li>• От 500 кг — скидка 5%</li>
-                        <li>• От 1000 кг — скидка 10%</li>
+                        <li>• От 10 коробок — скидка 5%</li>
+                        <li>• От 20 коробок — скидка 10%</li>
                         <li>• Постоянным клиентам — индивидуальные цены</li>
-                        <li>• Доставка по Череповцу бесплатно от 300 кг</li>
+                        <li>• Доставка по Череповцу бесплатно от 5 коробок</li>
                       </ul>
                     </div>
                   </div>
