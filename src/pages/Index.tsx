@@ -175,29 +175,40 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="lg:col-span-4">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img 
-                  src="https://cdn.poehali.dev/files/IMG_20240724_163958.jpg"
-                  alt="Гвозди барабанные винтовые"
-                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/IMG_20240724_164628.jpg"
-                  alt="Гвозди ерш кольцевые"
-                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/2.5х55винт,2.5х60кольцо,3.1х90кольцо.jpg"
-                  alt="Склад готовой продукции"
-                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/2.5х45винт,2.5х70винт,2.5х50винт.jpg"
-                  alt="Ассортимент гвоздей на складе"
-                  className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+            <div className="md:col-span-2 md:row-span-2">
+              <img 
+                src="https://cdn.poehali.dev/files/2.5х55винт,2.5х60кольцо,3.1х90кольцо.jpg"
+                alt="Склад готовой продукции"
+                className="w-full h-full object-cover rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:scale-[1.02]"
+              />
+            </div>
+            <div className="md:row-span-1">
+              <img 
+                src="https://cdn.poehali.dev/files/IMG_20240724_163958.jpg"
+                alt="Гвозди барабанные винтовые"
+                className="w-full h-48 md:h-full object-cover rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:scale-[1.02]"
+              />
+            </div>
+            <div className="md:row-span-1">
+              <img 
+                src="https://cdn.poehali.dev/files/IMG_20240724_164628.jpg"
+                alt="Гвозди ерш кольцевые"
+                className="w-full h-48 md:h-full object-cover rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:scale-[1.02]"
+              />
+            </div>
+          </div>
+
+          <div className="relative mb-12">
+            <img 
+              src="https://cdn.poehali.dev/files/2.5х45винт,2.5х70винт,2.5х50винт.jpg"
+              alt="Ассортимент гвоздей на складе"
+              className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-xl"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl flex items-end p-8">
+              <div className="text-white">
+                <h3 className="text-3xl font-bold mb-2">Более 50 типоразмеров в наличии</h3>
+                <p className="text-lg">Доставка по России, гарантия качества</p>
               </div>
             </div>
           </div>
