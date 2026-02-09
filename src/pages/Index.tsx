@@ -529,7 +529,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {[
-                    { icon: "MapPin", label: "г. Череповец, ул. Промышленная, 45" },
+                    { icon: "MapPin", label: "г. Череповец, ул. Кирилловское шоссе, д.88А" },
                     { icon: "Phone", label: "+7 (8202) 55-33-11" },
                     { icon: "Mail", label: "info@globus-metiz.ru" },
                     { icon: "Clock", label: "Пн-Пт: 8:00-17:00, Сб: 9:00-14:00" },
