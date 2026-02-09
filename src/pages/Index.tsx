@@ -17,30 +17,49 @@ const Index = () => {
 
   const products = [
     {
-      category: "Гвозди винтовые / ерш / кольцевые",
+      category: "Гвозди винтовые",
       items: [
-        { name: "2.5/45", quantity: "7200 шт", price: "2590 ₽" },
-        { name: "2.5/50", quantity: "7200 шт", price: "2775 ₽" },
-        { name: "2.5/55", quantity: "7200 шт", price: "2960 ₽" },
-        { name: "2.5/60", quantity: "7200 шт", price: "3145 ₽" },
-        { name: "2.5/70", quantity: "7200 шт", price: "3515 ₽" },
-        { name: "2.5/80", quantity: "7200 шт", price: "3885 ₽" },
-        { name: "2.8/60", quantity: "5400 шт", price: "2925 ₽" },
-        { name: "2.8/70", quantity: "5400 шт", price: "3315 ₽" },
-        { name: "2.8/80", quantity: "5400 шт", price: "3705 ₽" },
-        { name: "2.8/88", quantity: "5400 шт", price: "3900 ₽" },
-        { name: "2.8/90", quantity: "5400 шт", price: "4095 ₽" },
-        { name: "3.1/70", quantity: "3600 шт", price: "2835 ₽" },
-        { name: "3.1/80", quantity: "3600 шт", price: "3150 ₽" },
-        { name: "3.1/90", quantity: "3600 шт", price: "3465 ₽" },
+        { name: "2.5/45 винтовой", quantity: "6000 шт", price: "2315 ₽" },
+        { name: "2.5/50 винтовой", quantity: "6000 шт", price: "2525 ₽" },
+        { name: "2.5/55 винтовой", quantity: "4800 шт", price: "2185 ₽" },
+        { name: "2.5/60 винтовой", quantity: "4800 шт", price: "2240 ₽" },
+        { name: "2.5/70 винтовой", quantity: "3600 шт", price: "1920 ₽" },
+        { name: "2.5/80 винтовой", quantity: "3600 шт", price: "2160 ₽" },
+        { name: "2.8/60 винтовой", quantity: "4000 шт", price: "2270 ₽" },
+        { name: "2.8/70 винтовой", quantity: "3000 шт", price: "1945 ₽" },
+        { name: "2.8/80 винтовой", quantity: "3000 шт", price: "2195 ₽" },
+        { name: "2.8/88 винтовой", quantity: "2000 шт", price: "1950 ₽" },
+        { name: "2.8/90 винтовой", quantity: "2000 шт", price: "1960 ₽" },
+        { name: "3.1/70 винтовой", quantity: "3000 шт", price: "2390 ₽" },
+        { name: "3.1/80 винтовой", quantity: "3000 шт", price: "2705 ₽" },
+        { name: "3.1/90 винтовой", quantity: "2000 шт", price: "1960 ₽" },
+      ]
+    },
+    {
+      category: "Гвозди ерш/кольцевые",
+      items: [
+        { name: "2.5/45 ерш/кольцевой", quantity: "6000 шт", price: "2315 ₽" },
+        { name: "2.5/50 ерш/кольцевой", quantity: "6000 шт", price: "2525 ₽" },
+        { name: "2.5/55 ерш/кольцевой", quantity: "4800 шт", price: "2185 ₽" },
+        { name: "2.5/60 ерш/кольцевой", quantity: "4800 шт", price: "2240 ₽" },
+        { name: "2.5/70 ерш/кольцевой", quantity: "3600 шт", price: "1920 ₽" },
+        { name: "2.5/80 ерш/кольцевой", quantity: "3600 шт", price: "2160 ₽" },
+        { name: "2.8/60 ерш/кольцевой", quantity: "4000 шт", price: "2270 ₽" },
+        { name: "2.8/70 ерш/кольцевой", quantity: "3000 шт", price: "1945 ₽" },
+        { name: "2.8/80 ерш/кольцевой", quantity: "3000 шт", price: "2195 ₽" },
+        { name: "2.8/88 ерш/кольцевой", quantity: "2000 шт", price: "1950 ₽" },
+        { name: "2.8/90 ерш/кольцевой", quantity: "2000 шт", price: "1960 ₽" },
+        { name: "3.1/70 ерш/кольцевой", quantity: "3000 шт", price: "2390 ₽" },
+        { name: "3.1/80 ерш/кольцевой", quantity: "3000 шт", price: "2705 ₽" },
+        { name: "3.1/90 ерш/кольцевой", quantity: "2000 шт", price: "1960 ₽" },
       ]
     },
     {
       category: "Гвозди гладкие общестроительные",
       items: [
-        { name: "2.5/40", quantity: "7200 шт", price: "2310 ₽" },
-        { name: "2.5/70", quantity: "7200 шт", price: "3465 ₽" },
-        { name: "2.8/80", quantity: "5400 шт", price: "3500 ₽" },
+        { name: "2.5/40", quantity: "10 кг", price: "110 ₽/кг" },
+        { name: "2.5/70", quantity: "10 кг", price: "110 ₽/кг" },
+        { name: "2.8/80", quantity: "10 кг", price: "110 ₽/кг" },
       ]
     }
   ];
@@ -220,14 +239,15 @@ const Index = () => {
             </Button>
             <Button size="lg" variant="outline" onClick={() => {
               const link = document.createElement('a');
-              link.href = '/price.xlsx';
-              link.download = 'Прайс-лист_ГЛОБУС-МЕТИЗ.xlsx';
+              link.href = 'https://cdn.poehali.dev/projects/a59411ca-a408-4bbe-842d-f2851c73e835/bucket/9b7051df-2498-4ab3-80a5-6cbd734b3074.jpg';
+              link.download = 'Прайс-лист_ГЛОБУС-МЕТИЗ.pdf';
+              link.target = '_blank';
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
             }}>
               <Icon name="Download" size={20} className="mr-2" />
-              Скачать Excel
+              Скачать прайс
             </Button>
           </div>
         </div>
