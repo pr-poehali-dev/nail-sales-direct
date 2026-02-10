@@ -76,7 +76,7 @@ const Index = () => {
                 className="h-12 w-auto"
               />
             </div>
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-6">
               {[
                 { id: "home", label: "Главная", icon: "Home" },
                 { id: "products", label: "Продукция", icon: "Package" },
@@ -108,17 +108,17 @@ const Index = () => {
       <section id="home" className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <Badge className="bg-accent text-white">
                 <Icon name="Award" size={14} className="mr-1" />
                 Производитель №1 в Череповце
               </Badge>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Гвозди от<br />
                 <span className="text-primary">производителя</span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-base md:text-xl text-gray-600 leading-relaxed">
                 ООО «ГЛОБУС-МЕТИЗ» — собственное производство метизов в Череповце. 
                 Прямые поставки без посредников. Гарантия качества и низкие цены.
               </p>
@@ -132,7 +132,7 @@ const Index = () => {
                   Скачать прайс
                 </Button>
               </div>
-              <div className="grid grid-cols-3 gap-6 pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 pt-6">
                 {[
                   { icon: "Factory", label: "Собственное производство" },
                   { icon: "Shield", label: "Гарантия качества" },
@@ -169,8 +169,8 @@ const Index = () => {
               <Icon name="Package" size={14} className="mr-1" />
               Наша продукция
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Каталог гвоздей</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Каталог гвоздей</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Широкий ассортимент метизов для любых строительных задач
             </p>
           </div>
@@ -260,13 +260,13 @@ const Index = () => {
               <Icon name="Factory" size={14} className="mr-1" />
               О производстве
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Наш цех в Череповце</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Наш цех в Череповце</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Современное оборудование и контроль качества на всех этапах
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
             <div className="space-y-6">
               <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center">
                 <Icon name="Factory" size={80} className="text-gray-500" />
@@ -329,9 +329,9 @@ const Index = () => {
               <Icon name="FileText" size={14} className="mr-1" />
               Цены
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Прайс-лист</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Актуальные цены на всю продукцию. Оптовым покупателям — специальные условия
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Прайс-лист</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
+              Актуальные цены на всю продукцию
             </p>
           </div>
 
@@ -375,20 +375,7 @@ const Index = () => {
                   ))}
                 </div>
 
-                <div className="mt-8 p-6 bg-accent/10 rounded-xl">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Info" size={24} className="text-accent flex-shrink-0" />
-                    <div className="space-y-2">
-                      <p className="font-semibold text-gray-900">Особые условия:</p>
-                      <ul className="space-y-1 text-gray-700">
-                        <li>• От 10 коробок — скидка 5%</li>
-                        <li>• От 20 коробок — скидка 10%</li>
-                        <li>• Постоянным клиентам — индивидуальные цены</li>
-                        <li>• Доставка по Череповцу бесплатно от 5 коробок</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+
 
                 <div className="flex gap-4 mt-8">
                   <Button className="flex-1 bg-primary hover:bg-primary/90">
@@ -413,13 +400,13 @@ const Index = () => {
               <Icon name="Truck" size={14} className="mr-1" />
               Логистика
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Доставка и оплата</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Доставка и оплата</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Быстрая доставка по России и удобные способы оплаты
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="pt-8">
                 <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -457,7 +444,7 @@ const Index = () => {
             </Card>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-12 grid md:grid-cols-2 gap-8">
+          <div className="max-w-4xl mx-auto mt-12 grid lg:grid-cols-2 gap-6 md:gap-8">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -514,13 +501,13 @@ const Index = () => {
               <Icon name="Phone" size={14} className="mr-1" />
               Связь
             </Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Контакты</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Контакты</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Свяжитесь с нами удобным способом
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div className="space-y-8">
               <Card>
                 <CardHeader>
